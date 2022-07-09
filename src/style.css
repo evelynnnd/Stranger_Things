@@ -1,0 +1,13 @@
+nav {
+    margin-bottom: 1rem;
+}
+
+.navlink {
+    margin-right: 2rem;
+    color: gray;
+}
+
+.navlink.active {
+    color: green;
+    font-weight: 600;
+}
