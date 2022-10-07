@@ -1,3 +1,4 @@
+
 nav {
     margin-bottom: 1rem;
 }
@@ -16,17 +17,15 @@ nav {
     background-color: rgba(8, 98, 8, 0.475);
 }
 
-.title {
+.title,
+.featured-title,
+#form-title {
     border: 2px solid rgb(22, 17, 17);
     background-color: rgb(93, 134, 93);
 }
 
-#form-title {
-    border: 2px solid black;
-    background-color: rgb(93, 134, 93);
-}
-
-#post-form {
+#post-form,
+.featured-post {
    background-color: rgba(8, 98, 8, 0.475);
 }
 
@@ -36,6 +35,13 @@ nav {
 #login,
 #register,
 #signedup,
-#profile {
+#profile,
+#profile-welcome {
     text-decoration: underline;
 }
+
+.message1 {
+border: 2px solid green;
+}
+
+

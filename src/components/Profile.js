@@ -20,21 +20,21 @@ const Profile = ({ token, username }) => {
 
     return (
         <div className="profile">
-            <h1>Welcome {`${username}`}</h1>
-            <button onClick={userData}>View Messages</button>
+            <h1 id="profile-welcome">Welcome {`${username}`}</h1>
+            <h2>Messages</h2>
             {messages.map((message) => {
                 console.log(message)
                 return <>
-                {username !== message.fromUser.username ?
-                    <div key={message._id} className='message1'>
-                        <div className='post'>
-                            <p>From: {message.username}</p>
-                            <p>{message.post.title}</p>
-                            <p>{message.content}</p>
+                    {username !== message.fromUser.username ?
+                        <div key={message._id} className='message1'>
+                            <div className='post'>
+                                <p>From: {message.fromUser.username}</p>
+                                <p>Post: {message.post.title}</p>
+                                <p>Message: {message.content}</p>
+                            </div>
                         </div>
-                    </div>
-                    : null
-            }</>
+                        : null
+                    }</>
             })}
         </div>
     )

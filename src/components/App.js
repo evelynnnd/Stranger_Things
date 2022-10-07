@@ -16,7 +16,6 @@ const App = () => {
     const [postId, setPostId] = useState(null)
     const [featuredPosts, setFeaturedPosts] = useState([])
     const [search, setSearch] = useState('')
-    const [user, setUser] = useState({})
     const history = useHistory()
 
     const logout = async (event) => {

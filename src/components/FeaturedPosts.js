@@ -14,26 +14,25 @@ const FeaturedPosts = ({ token, featuredPosts, setFeaturedPosts, username, postI
     const handleSubmitComment = (event) => {
         event.preventDefault();
         if (username !== featuredPosts.author.username) {
-        newMessage(token, postId, comment)
-        alert('Message sent!')
+            newMessage(token, postId, comment)
+            alert('Message sent!')
         } else {
             alert('not allowed')
         }
     }
 
-    const handleDeletePost= async (postId) => {
+    const handleDeletePost = async (postId) => {
         deletePosts(token, postId)
         history.push('/posts')
     }
 
     return <div className="featured-post">
-        <h2>{featuredPosts.title}</h2>
+        <h2 className="featured-title">{featuredPosts.title}</h2>
         <div>Description: {featuredPosts.description}</div>
         <div>Price: {featuredPosts.price}</div>
         <div>Seller: {featuredPosts.username}</div>
         <div>Location: {featuredPosts.location}</div>
         <section>
-            <h3>Messages</h3>
             <ul>
                 {featuredPosts.messages.map(message => {
                     console.log(featuredPosts)
@@ -47,11 +46,13 @@ const FeaturedPosts = ({ token, featuredPosts, setFeaturedPosts, username, postI
         </section>
 
         <form onSubmit={handleSubmitComment}>
+            <label>Send a message: 
             <input
                 onChange={(event) => setComment(event.target.value)}
                 type="text" name="comment"
                 placeholder="comment" value={comment} />
             <button className="submit" type="submit">Submit</button>
+            </label>
         </form>
 
         {username == featuredPosts.author.username &&

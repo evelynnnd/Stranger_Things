@@ -43,12 +43,6 @@ const Posts = ({ search, setSearch, token, posts, postId, setPosts, setPostId, s
         }
     }
 
-    //  const handleDeletePost= async (event, postId) => {
-    //     event.stopPropagation()
-    //     deletePosts(token, postId)
-    //     history.push('/posts')
-    // }
-
     return (
         <>
             <div id="search-form">
